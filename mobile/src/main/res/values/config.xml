@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="baseUrl">https://bbdev.unh.edu/webapps/unh-ump-bb_bb60/Fetch?secret=c01bd75d3375b0f9a8e5c417068e182c&amp;a=unh&amp;command=predictions&amp;stopId=</string>
+</resources>
