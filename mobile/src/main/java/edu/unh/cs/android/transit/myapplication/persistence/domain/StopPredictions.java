@@ -22,10 +22,11 @@ public class StopPredictions {
     private static final String TAG = "StopPredictions";
 
     StopPredictions(int stopId){
-        XmlPullParser xml = getXmlFromUrl(getStopUrl(stopId));
+        XmlPullParser xml = getXmlFromUrl(stopId);
 
     }
 
+    /*
     URL getStopUrl(int stopId) {
 
         String url = MainActivity.getAppContext().getString(R.string.baseUrl);
@@ -39,11 +40,16 @@ public class StopPredictions {
             Log.e(TAG,"Malformed URL: " + url, e);
             return null;
         }
-    }
+      }
+*/
 
-    XmlPullParser getXmlFromUrl(URL url) {
+    XmlPullParser getXmlFromUrl(int stopId) {
+
+        //routes from 101 to 183 are valid!
+        String url = MainActivity.getAppContext().getString(R.string.baseUrl) + stopId;
+
         try {
-            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+            HttpURLConnection urlConnection = (HttpURLConnection) new URL(url).openConnection();
             InputStream in = new BufferedInputStream(urlConnection.getInputStream());
 
             XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
@@ -56,10 +62,14 @@ public class StopPredictions {
             urlConnection.disconnect();
 
             return xpp;
+        } catch(MalformedURLException e) {
+            Log.e(TAG,"Malformed URL: " + url, e);
+            return null;
         } catch( Exception e) {
             Log.e(TAG, "could not connect to xml url", e);
             return null;
         }
+
     }
 
 }
