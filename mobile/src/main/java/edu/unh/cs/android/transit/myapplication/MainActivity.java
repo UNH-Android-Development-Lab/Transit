@@ -1,12 +1,16 @@
 package edu.unh.cs.android.transit.myapplication;
 
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import edu.unh.cs.android.transit.myapplication.persistence.domain.StopPredictions;
+
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "MainActivity";
 
     private static Context context;
 
@@ -17,6 +21,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         context = getApplicationContext();
+
+        try {
+            new StopPredictions(121);
+        } catch (Exception e) {
+            Log.e(TAG, "nope", e);
+        }
     }
 
     public static Context getAppContext() {

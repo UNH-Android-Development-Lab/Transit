@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="baseUrl">https://bbdev.unh.edu/webapps/unh-ump-bb_bb60/Fetch?secret=c01bd75d3375b0f9a8e5c417068e182c&amp;a=unh&amp;command=predictions&amp;stopId=</string>
+    <string name="baseUrl">https://bbdev.unh.edu/webapps/unh-ump-bb_bb60/Fetch?secret=c01bd75d3375b0f9a8e5c417068e182c\u0026a=unh\u0026command=predictions\u0026stopId=</string>
+    <integer name="lowStop">101</integer>
+    <integer name="highStop">183</integer>
 </resources>
