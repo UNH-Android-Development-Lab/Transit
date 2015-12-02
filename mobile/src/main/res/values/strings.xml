@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+	<string name="app_name">UNH Transit</string>
+	<string name="action_settings">Settings</string>
+	<string name="tab_nearby">Nearby</string>
+	<string name="tab_search">Search</string>
+	<string name="tab_saved_stops">My Stops</string>
 </resources>

@@ -2,7 +2,17 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/primaryBlue</item>
+        <item name="colorPrimaryDark">@color/accentDarkBlue</item>
+        <item name="colorAccent">@color/accentOrange</item>
+    </style>
+    <!-- Use light text on the AppBar -->
+    <style name="AppTheme.AppBar" parent="AppTheme">
+        <item name="android:textColor">@android:color/primary_text_light</item>
+        <item name="android:textColorPrimary">@android:color/primary_text_dark</item>
+        <item name="android:textColorSecondary">@android:color/secondary_text_dark</item>
     </style>
 
 </resources>
