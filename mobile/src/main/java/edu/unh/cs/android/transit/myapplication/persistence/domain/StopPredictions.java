@@ -53,31 +53,17 @@ public class StopPredictions {
             eventType = xml.next();
         }
     }
+
+
     /*
 body
  predictions routeTitle routeTag stopTitle stopTag
   direction title
    prediction
    prediction
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  */
+
+
 
 
     private XmlPullParser getXmlFromUrl(int stopId) throws XmlPullParserException, IOException {
